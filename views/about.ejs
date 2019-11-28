@@ -1,0 +1,55 @@
+<%- include("header") -%>
+
+<style>
+  .airport-image {
+    width: 25cm;
+    height: 25cm;
+    background: url(<%= image %>) no-repeat;
+    position: absolute;
+    left: 27cm;
+    top: 1.38cm;
+  }
+</style>
+
+<div class="airport-image"></div>
+<div class="">
+
+
+<div class="">
+  <% details.forEach(function(item){ %>
+  <h1><%=item.airport%></h1>
+  <!-- <h4><%=item.city%></h4>
+  <h3><%=item.state%></h3>
+  <h3><%=item.country%></h3> -->
+  <% }) %>
+  <p>Track your filghts here :  <a href="https://www.flightview.com/traveltools/">Filghts Today</a></p>
+
+</div>
+</div>
+
+<div class="commentB">
+  <div class="titleBox">
+    <label>Visitors review</label>
+    <!-- <button type="button" class="close" aria-hidden="true">&times;</button> -->
+  </div>
+  <div class="actionBox">
+    <ul class="commentList">
+      <% posts.forEach(function(item){ %>
+      <li>
+        <div class="commentText">
+          <h5 class="comment"><%=item.Comments%></h5>
+        </div>
+      </li>
+      <% }) %>
+    </ul>
+    <form class="form-inline" role="form" id="comments" action="/comment" method="post">
+      <div class="form-group">
+        <input class="form-control" name="newComment" type="text" placeholder="Your comments" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" type="submit" name="commentButton">Add</button>
+      </div>
+    </form>
+  </div>
+
+</div>
