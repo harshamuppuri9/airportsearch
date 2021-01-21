@@ -14,6 +14,6 @@
     "express": "^4.16.3",
     "gridfs-stream": "^1.1.1",
     "mongoose": "^5.7.12",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
